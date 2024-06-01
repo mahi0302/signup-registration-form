@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="../CSS/formValidation.css" />
+  </head>
+  <body>
+    <form class="signup-container" novalidate>
+      <h1>Sign up Form</h1>
+      <label for="firstName">First Name</label><br />
+      <span class="firstname-required danger"></span><br />
+      <input
+        type="text"
+        minlength="5"
+        maxlength="30"
+        required
+        autocomplete="off"
+        id="firstName"
+        placeholder="Enter first name"
+      /><br />
+
+      <label for="lastName">Last Name</label><br />
+      <span class="lastname-required danger"></span><br />
+      <input
+        type="text"
+        minlength="5"
+        maxlength="30"
+        required
+        autocomplete="off"
+        id="lastName"
+        placeholder="Enter last name"
+      /><br />
+
+      <label for="emailId">Email Id</label><br />
+      <span class="emailid-required danger"></span><br />
+      <input
+        type="email"
+        minlength="10"
+        maxlength="50"
+        required
+        id="emailId"
+        autocomplete="off"
+        placeholder="Enter email id"
+      /><br />
+
+      <label for="fullAddress">Full Address</label><br />
+      <span class="fullAddress-required danger"></span><br />
+      <input
+        type="text"
+        minlength="20"
+        maxlength="200"
+        required
+        id="fullAddress"
+        autocomplete="off"
+        placeholder="Enter full address"
+      /><br />
+
+      <label for="courses">Select Courses</label><br />
+      <span class="course-required danger"></span><br />
+
+      <div class="courses-container">
+        <input
+          type="checkbox"
+          name="courses"
+          required
+          class="courses-checkbox"
+        />
+        <label class="courses-label">Full Stack Python</label>
+      </div>
+
+      <div class="courses-container">
+        <input
+          type="checkbox"
+          name="courses"
+          required
+          class="courses-checkbox"
+        />
+        <label class="courses-label">Full Stack Java</label><br />
+      </div>
+
+      <label for="passwordMain">Password</label><br />
+      <span class="password-required danger"></span><br />
+      <input
+        type="password"
+        minlength="8"
+        maxlength="50"
+        required
+        id="passwordMain"
+        autocomplete="off"
+        placeholder="Enter password"
+      /><br />
+
+      <label for="paswordConfirm">Confirm Password</label><br />
+      <span class="confirmPassword-required danger"></span><br />
+      <input
+        type="password"
+        minlength="8"
+        maxlength="50"
+        required
+        id="paswordConfirm"
+        autocomplete="off"
+        placeholder="Confirm password"
+      /><br />
+
+      <button type="button" onclick="submitForm()">Sign Up</button>
+    </form>
+    <script src="../JS/formValidation.js"></script>
+  </body>
+</html>
